@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://dxjyy6q6jvidd"]
+
+[ext_resource type="Script" path="res://Music_HZ_Line.gd" id="1_jm3hh"]
+[ext_resource type="AudioStream" uid="uid://bjrtlesbi2c0u" path="res://track_on_time.MP3" id="2_1neik"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Music_HZ_Line1" type="Line2D" parent="."]
+position = Vector2(1152, 640)
+width = 1.0
+script = ExtResource("1_jm3hh")
+
+[node name="Music_HZ_Line2" type="Line2D" parent="."]
+position = Vector2(1152, 640)
+rotation = 3.14159
+width = 1.0
+script = ExtResource("1_jm3hh")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_1neik")
+autoplay = true
+bus = &"Music"
